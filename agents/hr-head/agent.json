@@ -1,0 +1,36 @@
+{
+  "name": "Kage HR Head",
+  "role": "manager",
+  "reportsTo": "Kage CTO",
+  "adapterType": "claude_local",
+  "adapterConfig": {
+    "model": "claude-sonnet-4-6",
+    "effort": "medium",
+    "graceSec": 15,
+    "timeoutSec": 0,
+    "maxTurnsPerRun": 30,
+    "dangerouslySkipPermissions": false,
+    "instructionsEntryFile": "AGENTS.md",
+    "instructionsBundleMode": "managed",
+    "paperclipSkillSync": {
+      "desiredSkills": [
+        "paperclipai/paperclip/paperclip",
+        "paperclipai/paperclip/paperclip-board",
+        "paperclipai/paperclip/paperclip-converting-plans-to-tasks"
+      ]
+    }
+  },
+  "runtimeConfig": {
+    "heartbeat": {
+      "enabled": false,
+      "cooldownSec": 10,
+      "intervalSec": 300,
+      "wakeOnDemand": true,
+      "maxConcurrentRuns": 5,
+      "skipTimerWhenNoActionableWork": true
+    },
+    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+  },
+  "budgetMonthlyCents": 3000,
+  "permissions": { "canCreateAgents": false, "canCreateSkills": false }
+}

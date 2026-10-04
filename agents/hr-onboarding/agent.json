@@ -1,0 +1,35 @@
+{
+  "name": "Kage HR Onboarding",
+  "role": "specialist",
+  "reportsTo": "Kage HR Head",
+  "adapterType": "claude_local",
+  "adapterConfig": {
+    "model": "claude-sonnet-4-6",
+    "effort": "medium",
+    "graceSec": 15,
+    "timeoutSec": 0,
+    "maxTurnsPerRun": 30,
+    "dangerouslySkipPermissions": false,
+    "instructionsEntryFile": "AGENTS.md",
+    "instructionsBundleMode": "managed",
+    "paperclipSkillSync": {
+      "desiredSkills": [
+        "paperclipai/paperclip/paperclip",
+        "hr-policy-validator"
+      ]
+    }
+  },
+  "runtimeConfig": {
+    "heartbeat": {
+      "enabled": false,
+      "cooldownSec": 10,
+      "intervalSec": 300,
+      "wakeOnDemand": true,
+      "maxConcurrentRuns": 3,
+      "skipTimerWhenNoActionableWork": true
+    },
+    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+  },
+  "budgetMonthlyCents": 1000,
+  "permissions": { "canCreateAgents": false, "canCreateSkills": false }
+}
