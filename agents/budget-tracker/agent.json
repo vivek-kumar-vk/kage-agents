@@ -1,0 +1,36 @@
+{
+  "name": "Kage Budget Tracker",
+  "role": "specialist",
+  "reportsTo": "Kage Finance Head",
+  "adapterType": "claude_local",
+  "adapterConfig": {
+    "model": "claude-sonnet-4-6",
+    "effort": "medium",
+    "graceSec": 15,
+    "timeoutSec": 0,
+    "maxTurnsPerRun": 30,
+    "dangerouslySkipPermissions": false,
+    "instructionsEntryFile": "AGENTS.md",
+    "instructionsBundleMode": "managed",
+    "paperclipSkillSync": {
+      "desiredSkills": [
+        "paperclipai/paperclip/paperclip",
+        "ynab-budgeting",
+        "expense-categorization",
+        "goal-projection"
+      ]
+    }
+  },
+  "runtimeConfig": {
+    "heartbeat": {
+      "enabled": true,
+      "intervalSec": 86400,
+      "wakeOnAssignment": true,
+      "wakeOnOnDemand": true,
+      "wakeOnAutomation": true
+    },
+    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+  },
+  "budgetMonthlyCents": 1500,
+  "permissions": { "canCreateAgents": false, "canCreateSkills": false }
+}

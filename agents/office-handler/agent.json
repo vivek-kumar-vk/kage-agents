@@ -1,0 +1,34 @@
+{
+  "name": "Kage Office Task Handler",
+  "role": "specialist",
+  "reportsTo": "Kage Ops Head",
+  "adapterType": "hermes_local",
+  "adapterConfig": {
+    "model": "claude-sonnet-4-6",
+    "effort": "medium",
+    "graceSec": 15,
+    "timeoutSec": 0,
+    "maxTurnsPerRun": 50,
+    "dangerouslySkipPermissions": true,
+    "instructionsEntryFile": "AGENTS.md",
+    "instructionsBundleMode": "managed",
+    "paperclipSkillSync": {
+      "desiredSkills": [],
+      "syncMode": "ephemeral"
+    }
+  },
+  "runtimeConfig": {
+    "heartbeat": {
+      "enabled": false,
+      "cooldownSec": 10,
+      "intervalSec": 300,
+      "wakeOnDemand": true,
+      "maxConcurrentRuns": 5,
+      "skipTimerWhenNoActionableWork": true
+    },
+    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" },
+    "debug": { "providerTrace": "raw" }
+  },
+  "budgetMonthlyCents": 2000,
+  "permissions": { "canCreateAgents": false, "canCreateSkills": true }
+}

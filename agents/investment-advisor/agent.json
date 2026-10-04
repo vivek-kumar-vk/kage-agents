@@ -1,0 +1,37 @@
+{
+  "name": "Kage Investment Advisor",
+  "role": "specialist",
+  "reportsTo": "Kage Finance Head",
+  "adapterType": "claude_local",
+  "adapterConfig": {
+    "model": "claude-sonnet-4-6",
+    "effort": "medium",
+    "graceSec": 15,
+    "timeoutSec": 0,
+    "maxTurnsPerRun": 30,
+    "dangerouslySkipPermissions": false,
+    "instructionsEntryFile": "AGENTS.md",
+    "instructionsBundleMode": "managed",
+    "paperclipSkillSync": {
+      "desiredSkills": [
+        "paperclipai/paperclip/paperclip",
+        "investment-research",
+        "portfolio-analysis",
+        "risk-assessment"
+      ]
+    }
+  },
+  "runtimeConfig": {
+    "heartbeat": {
+      "enabled": false,
+      "cooldownSec": 10,
+      "intervalSec": 604800,
+      "wakeOnDemand": true,
+      "maxConcurrentRuns": 2,
+      "skipTimerWhenNoActionableWork": true
+    },
+    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+  },
+  "budgetMonthlyCents": 2000,
+  "permissions": { "canCreateAgents": false, "canCreateSkills": false }
+}
