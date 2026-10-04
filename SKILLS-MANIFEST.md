@@ -78,6 +78,20 @@ All custom skills referenced in agent `desiredSkills` that must be created in Pa
 | `habit-tracking` | Todo Manager | Daily/weekly habits, streaks |
 | `office-automation` | Office Handler (implicit) | Expenses, travel, vendor research, docs |
 
+### Platform SME Domain
+| Skill Key | Referenced By | Description |
+|-----------|---------------|-------------|
+| `hermes-adapter-expert` | Hermes SME | Hermes config, patterns, self-improvement loops |
+| `hermes-skill-lifecycle` | Hermes SME | How Hermes writes/updates skills |
+| `paperclip-company-spec` | Paperclip SME | COMPANY.md, TEAM.md, AGENTS.md patterns |
+| `paperclip-skill-dev` | Paperclip SME | Skill creation, sync modes, trust levels |
+| `paperclip-mcp-gateway` | Paperclip SME | MCP Tool Gateway, governed tool access |
+| `paperclip-orchestration` | Paperclip SME | Heartbeats, budgets, permissions, delegation |
+| `github-actions-agents` | GitHub SME | GitHub Actions for agent workflows |
+| `github-mcp-tools` | GitHub SME | GitHub MCP server tools (PR, issues, search) |
+| `github-security-agents` | GitHub SME | Fine-grained PATs, GitHub Apps, secrets |
+| `platform-cross-tool-patterns` | Platform SME Head | Meta-skills combining Hermes + Paperclip + GitHub |
+
 ---
 
 ## Skill Creation Priority
@@ -126,6 +140,18 @@ All custom skills referenced in agent `desiredSkills` that must be created in Pa
 31. `habit-tracking`
 32. `office-automation`
 
+### Phase 7 (Platform SME - enables all teams to use tools better)
+33. `hermes-adapter-expert`
+34. `hermes-skill-lifecycle`
+35. `paperclip-company-spec`
+36. `paperclip-skill-dev`
+37. `paperclip-mcp-gateway`
+38. `paperclip-orchestration`
+39. `github-actions-agents`
+40. `github-mcp-tools`
+41. `github-security-agents`
+42. `platform-cross-tool-patterns`
+
 ---
 
 ## Skill Structure (SKILL.md)
@@ -161,6 +187,7 @@ description: >
 | Job Search | servation/job-search-mcp, Indeed, LinkedIn |
 | Daily Ops | Google Workspace (Gmail+Calendar), Outlook, Playwright |
 | HR | Paperclip built-in |
+| Platform SME | Paperclip repo (watch), GitHub API/GraphQL, Hermes adapter source |
 
 ---
 

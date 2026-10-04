@@ -11,11 +11,12 @@ Kage CTO is the chief of staff. Each team has a lead that reports to the CTO. Bu
 | 5 | Finance | Budget, salary allocation, investment analysis (advisory only) | Kage Finance Head | claude_local | Planned |
 | 6 | Job Search | Job discovery, resume building, application tracking | Kage Job Search Head | claude_local | Planned |
 | 7 | Daily Ops | Calendar, email, todos, office tasks | Kage Ops Head | hermes_local | Planned |
+| 8 | Platform SME | Hermes, Paperclip, GitHub expertise; daily updates; teach & suggest features | Kage Platform SME Head | hermes_local | **New**: `agents/platform-sme-head/`, `hermes-sme/`, `paperclip-sme/`, `github-sme/` |
 
 ## Adapter Policy
 
 - **claude_local**: Stable, well-defined workflows. `dangerouslySkipPermissions: false`.
-- **hermes_local**: Self-improving, writes skills. `dangerouslySkipPermissions: true`, `canCreateSkills: true`. Use for: Engineering Leads, Resource Curator, Job Scout, Ops Head, Email Triage, Office Task Handler.
+- **hermes_local**: Self-improving, writes skills. `dangerouslySkipPermissions: true`, `canCreateSkills: true`. Use for: Engineering Leads, Resource Curator, Job Scout, Ops Head, Email Triage, Office Task Handler, **Platform SMEs (all)**.
 
 ## Rules for Every Agent
 
