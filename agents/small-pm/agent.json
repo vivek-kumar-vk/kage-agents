@@ -32,8 +32,15 @@
       "maxConcurrentRuns": 8,
       "skipTimerWhenNoActionableWork": true
     },
-    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+    "aiConnection": {
+      "mode": "responsible_user",
+      "method": "subscription",
+      "provider": "anthropic"
+    }
   },
-  "budgetMonthlyCents": 3000,
-  "permissions": { "canCreateAgents": true, "canCreateSkills": false }
+  "budgetMonthlyCents": 5000,
+  "permissions": {
+    "canCreateAgents": true,
+    "canCreateSkills": false
+  }
 }

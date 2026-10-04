@@ -25,9 +25,18 @@
       "wakeOnOnDemand": true,
       "wakeOnAutomation": true
     },
-    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" },
-    "debug": { "providerTrace": "raw" }
+    "aiConnection": {
+      "mode": "responsible_user",
+      "method": "subscription",
+      "provider": "anthropic"
+    },
+    "debug": {
+      "providerTrace": "raw"
+    }
   },
-  "budgetMonthlyCents": 4000,
-  "permissions": { "canCreateAgents": false, "canCreateSkills": true }
+  "budgetMonthlyCents": 5000,
+  "permissions": {
+    "canCreateAgents": false,
+    "canCreateSkills": true
+  }
 }

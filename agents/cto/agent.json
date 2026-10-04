@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Kage CTO",
   "role": "general",
   "reportsTo": null,
@@ -32,8 +32,15 @@
       "maxConcurrentRuns": 20,
       "skipTimerWhenNoActionableWork": true
     },
-    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+    "aiConnection": {
+      "mode": "responsible_user",
+      "method": "subscription",
+      "provider": "anthropic"
+    }
   },
-  "budgetMonthlyCents": 0,
-  "permissions": { "canCreateAgents": true, "canCreateSkills": true }
+  "budgetMonthlyCents": 10000,
+  "permissions": {
+    "canCreateAgents": true,
+    "canCreateSkills": true
+  }
 }

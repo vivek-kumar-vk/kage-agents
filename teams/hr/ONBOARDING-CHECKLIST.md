@@ -47,7 +47,13 @@ Used by Kage HR Head to orchestrate three specialists. Each specialist runs thei
 *Policy gates. All must PASS for approval.*
 
 28. **Both specialist reports overall=PASS** — Onboarding and Training stages have no FAIL items.
-29. **Budget approved** — budgetMonthlyCents within team limits (specialist ≤2000, manager ≤5000, director ≤10000).
+29. **Budget approved** — budgetMonthlyCents within team limits:
+   - CTO / Director: ≤10000
+   - Manager: ≤5000
+   - HERMES Lead/Engineer: ≤6000 (includes self-improvement overhead)
+   - claude_local Engineer/DevOps: ≤3000
+   - HERMES Specialist: ≤3000
+   - claude_local Specialist: ≤2000
 30. **Permissions policy compliant** — canCreateAgents/canCreateSkills match role and adapter type.
 31. **Audit trail complete** — Both specialist reports include timestamps, tokens_used, and check details.
 32. **No policy violations** — Agent config doesn't violate org rules (e.g., no external API calls without MCP, no secret refs in files).
