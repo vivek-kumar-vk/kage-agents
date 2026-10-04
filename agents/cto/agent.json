@@ -1,0 +1,39 @@
+﻿{
+  "name": "Kage CTO",
+  "role": "general",
+  "reportsTo": null,
+  "adapterType": "claude_local",
+  "adapterConfig": {
+    "model": "claude-sonnet-4-6",
+    "effort": "medium",
+    "graceSec": 15,
+    "timeoutSec": 0,
+    "maxTurnsPerRun": 30,
+    "dangerouslySkipPermissions": false,
+    "instructionsEntryFile": "AGENTS.md",
+    "instructionsBundleMode": "managed",
+    "paperclipSkillSync": {
+      "desiredSkills": [
+        "paperclipai/paperclip/paperclip",
+        "paperclipai/paperclip/paperclip-board",
+        "paperclipai/paperclip/paperclip-converting-plans-to-tasks",
+        "paperclipai/paperclip/paperclip-create-agent",
+        "paperclipai/paperclip/para-memory-files",
+        "paperclipai/paperclip/first-task"
+      ]
+    }
+  },
+  "runtimeConfig": {
+    "heartbeat": {
+      "enabled": false,
+      "cooldownSec": 10,
+      "intervalSec": 300,
+      "wakeOnDemand": true,
+      "maxConcurrentRuns": 20,
+      "skipTimerWhenNoActionableWork": true
+    },
+    "aiConnection": { "mode": "responsible_user", "method": "subscription", "provider": "anthropic" }
+  },
+  "budgetMonthlyCents": 0,
+  "permissions": { "canCreateAgents": true, "canCreateSkills": true }
+}
